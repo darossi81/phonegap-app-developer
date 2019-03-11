@@ -137,10 +137,6 @@ body {
   	margin:auto;
 	visibility:hidden;
 	animation: glow 3500ms linear infinite;
-	position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-
 }
 	
 
@@ -250,6 +246,7 @@ td {
 }
 
 .toprow {
-	border-top:20px solid #ffffff;
+	border-top:20px solid #000000;
+	border-bottom:20px solid #000000;
 	background-color:#000000;
 }
