@@ -115,6 +115,13 @@ h1 {
 }
 
 
+body {
+   margin:0;
+   padding:0;
+  }
+
+
+
 .amberlight {
   border-radius: 50%;
   //background-image: linear-gradient(45deg, #ff8000, #ffa040);
@@ -125,11 +132,14 @@ h1 {
   box-shadow: 0 0 30px 2px #ffa040;
   //border:5px solid #000000;
   padding: 0px; 
-  width: 300px;
-  height: 300px;  
+  width: 400px;
+  height: 400px;  
   	margin:auto;
 	visibility:hidden;
 	animation: glow 3500ms linear infinite;
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 
 }
 	
