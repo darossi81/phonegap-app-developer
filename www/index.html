@@ -86,38 +86,47 @@ function myStopFunction() {
 </script>
 
 <body>
-    <table style="width:50%">
-  <tr class="toprow">
-    <td colspan="4" height="400px" width="400px"><div id="amberlight" class="amberlight"></div></td>
+
+
+<div class="toprow">
+    <div id="amberlight" class="amberlight"></div>
     <!-- <td colspan="3"><div id="redlight" class = "redlight"></div></td> -->
-  </tr>
+  
+  
+</div>
+ 
+ <table style="width:100%">
   <tr class="bottomrow">
-	<td width="50%">
+	<td>
 
 		<button id="startButton" onclick="timedText()" class="button1">Start</button>
 		<button onclick="myStopFunction()" class = "button2">Stop/Reset</button>
-	</td>
-	<td width="20%">
+
+
 			<select id="amberTime">
 				  <option value="5" selected="selected">5 Seconds</option>
 				  <option value="10">10 Seconds</option>
 				  <option value="15">15 Seconds</option>
 			</select>
-	</td>
-	<td width="20%">
+
+<!--
 			<select id="redTime">
 				  <option value="5" >5 Seconds</option>
 				  <option value="10" selected="selected">10 Seconds</option>
 				  <option value="15">15 Seconds</option>
 			</select>
-	</td>
-	<td width="10%">
+-->
+
+
 			<!-- <div>Test</div> -->
-		<button onclick="myTimeout1()" class="testAmber">1</button>
-		<button onclick="myTimeout2()" class="testRed">2</button>
+		<button onclick="myTimeout1()" class="button1">Test</button>
+		<!--<button onclick="myTimeout2()" class="testRed">2</button>-->
 	</td>
+
   </tr>
 </table>
+
+
 
 </body>
 
