@@ -115,14 +115,15 @@ h1 {
 }
 
 
-body {
+html, body {
    margin:0;
    padding:0;
+   height:100%;
   }
 
 
 
-.amberlight {
+#amberlight {
   border-radius: 50%;
   //background-image: linear-gradient(45deg, #ff8000, #ffa040);
   background-image: radial-gradient(#ff8000 30%, #ffa040 60%, #000000);
@@ -132,9 +133,9 @@ body {
   box-shadow: 0 0 30px 2px #ffa040;
   //border:5px solid #000000;
   padding: 0px; 
-  width: 400px;
-  height: 400px;  
-  	margin:auto;
+    margin: -80px auto 0;
+  width: 600px;
+  height: 600px;  
 	visibility:hidden;
 	animation: glow 3500ms linear infinite;
 }
@@ -152,7 +153,6 @@ body {
   padding: 0px; 
   width: 300px;
   height: 300px;  
-  	margin:auto;
 visibility:hidden;
 animation: glow 3000ms linear infinite;
   //animation: glowing2 3500ms infinite;
@@ -168,17 +168,17 @@ animation: glow 3000ms linear infinite;
 
 table, th, td {
   border: 0px solid black;
-  border-collapse: collapse;
-  margin: 0 auto;
+  margin: 0px;
+  width: 100%;
 }
 td {
-  padding: 10px;
+  padding: 0px;
   text-align: center;    
 }
 
 .button1 {
   background-color: #4CAF50;
-  border-radius:8px;
+  //border-radius:8px;
   border: none;
   color: white;
   padding: 15px 35px;
@@ -186,14 +186,16 @@ td {
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
-  margin: 4px 2px;
+  //margin: 4px 2px;
   cursor: pointer;
   font-weight:bold;
+  width:100%;
+  height:80px;
 }
 
 .button2 {
   background-color: #4CAF50;
-  border-radius:8px;
+  //border-radius:8px;
   border: none;
   color: white;
   padding: 15px 15px;
@@ -201,10 +203,11 @@ td {
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
-  margin: 4px 2px;
+  //margin: 4px 2px;
   cursor: pointer;
-  height:100%;
   font-weight:bold;
+  width:100%;
+   height:80px;
 }
 
 #amberTime, #redTime {
@@ -216,6 +219,8 @@ td {
 	background-color: #ff8000;
 	color:#ffffff;
 	border:0px solid;
+	width:100%;
+	 height:80px;
 }
 
 #redTime {
@@ -239,12 +244,51 @@ td {
 }
 
 .bottomrow {
-	border-top:20px solid #ffffff;
+	border-top:0px solid #ffffff;
 	background-color:#e5e5e5;
 }
 
-.toprow {
-	border-top:50px solid #000000;
-	border-bottom:50px solid #000000;
-	background-color:#000000;
+
+#container {
+	height:100%;
+}
+
+
+#header {
+		background-color:#000000;
+		//border-top:50px solid #000000;
+		//border-bottom:50px solid #000000;
+		height:100vh;
+		display: table-cell;
+		vertical-align: middle;
+		width:100vw;
+		}
+
+#footer {
+	position:absolute;
+   bottom:0;
+   width:100%;
+   height:80px;   /* Height of the footer */
+   background:#cccccc;
+   display: inline-block;
+}
+
+#start {
+float:left;
+width:25%;
+}
+
+#stop {
+float:left;
+width:25%;
+}
+
+#minutes {
+float:left;
+width:25%;
+}
+
+#test {
+float:left;
+width:25%;
 }
