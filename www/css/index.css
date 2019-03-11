@@ -204,7 +204,6 @@ td {
   font-size: 18px;
   margin: 4px 2px;
   cursor: pointer;
-  width:40%;
   height:100%;
   font-weight:bold;
 }
@@ -246,7 +245,7 @@ td {
 }
 
 .toprow {
-	border-top:20px solid #000000;
-	border-bottom:20px solid #000000;
+	border-top:50px solid #000000;
+	border-bottom:50px solid #000000;
 	background-color:#000000;
 }
