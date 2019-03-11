@@ -89,43 +89,44 @@ function myStopFunction() {
 <body>
 
 
-<div class="toprow">
-    <div id="amberlight" class="amberlight"></div>
-    <!-- <td colspan="3"><div id="redlight" class = "redlight"></div></td> -->
-  
-  
-</div>
+<div id="container">
+	<div id="header">
+		<div id="amberlight"></div>
+		<!-- <td colspan="3"><div id="redlight" class = "redlight"></div></td> -->
+	</div>
  
- <table style="width:100%">
-  <tr class="bottomrow">
-	<td>
+	 <div id="footer">
 
-		<button id="startButton" onclick="timedText()" class="button1">Start</button>
-		<button onclick="myStopFunction()" class = "button2">Stop/Reset</button>
+			<div id="start">
+			<button id="startButton" onclick="timedText()" class="button1">Start</button>
+			</div>
+			
+			<div id = "stop">
+			<button onclick="myStopFunction()" class = "button2">Stop/Reset</button>
+			</div>
 
-
+			
+			<div id = "minutes">
 			<select id="amberTime">
-				  <option value="5" selected="selected">5 Seconds</option>
-				  <option value="10">10 Seconds</option>
-				  <option value="15">15 Seconds</option>
-			</select>
+					  <option value="5" selected="selected">5 Seconds</option>
+					  <option value="10">10 Seconds</option>
+					  <option value="15">15 Seconds</option>
+				</select>
+			</div>
+	<!--
+				<select id="redTime">
+					  <option value="5" >5 Seconds</option>
+					  <option value="10" selected="selected">10 Seconds</option>
+					  <option value="15">15 Seconds</option>
+				</select>
+	-->
 
-<!--
-			<select id="redTime">
-				  <option value="5" >5 Seconds</option>
-				  <option value="10" selected="selected">10 Seconds</option>
-				  <option value="15">15 Seconds</option>
-			</select>
--->
 
-
-			<!-- <div>Test</div> -->
-		<button onclick="myTimeout1()" class="button1">Test</button>
-		<!--<button onclick="myTimeout2()" class="testRed">2</button>-->
-	</td>
-
-  </tr>
-</table>
+				<!-- <div>Test</div> -->
+			<div id ="test"><button onclick="myTimeout1()" class="button1">Test</button></div>
+			<!--<button onclick="myTimeout2()" class="testRed">2</button>-->
+	</div>
+<div>
 
 
 
