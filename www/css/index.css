@@ -155,10 +155,17 @@ html, body {
   height: 300px;  
 visibility:hidden;
 animation: glow 3000ms linear infinite;
+-webkit-animation: glow 3000ms linear infinite;
   //animation: glowing2 3500ms infinite;
 }
 
 @keyframes glow {
+  0% { filter: brightness(1.0);  }
+  50% { filter: brightness(2.0); }
+  100% { filter: brightness(1.0); }
+}
+
+@-webkit-keyframes glow {
   0% { filter: brightness(1.0);  }
   50% { filter: brightness(2.0); }
   100% { filter: brightness(1.0); }
