@@ -138,6 +138,7 @@ html, body {
   height: 600px;  
 	visibility:hidden;
 	animation: glow 3500ms linear infinite;
+	-webkit-animation: glow 3500ms linear infinite;
 }
 	
 
