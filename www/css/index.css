@@ -134,8 +134,8 @@ html, body {
   //border:5px solid #000000;
   padding: 0px; 
     margin: -80px auto 0;
-  width: 600px;
-  height: 600px;  
+  width: 400px;
+  height: 400px;  
 	visibility:hidden;
 	animation: glow 3500ms linear infinite;
 	-webkit-animation: glow 3500ms linear infinite;
