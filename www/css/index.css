@@ -129,8 +129,8 @@ html, body {
   background-image: radial-gradient(#ff8000 30%, #ffa040 60%, #000000);
   background-repeat: repeat;
   background-size: 30px 30px;
-  transform: rotate(45deg);
-  box-shadow: 0 0 30px 2px #ffa040;
+  -webkit-transform: rotate(45deg);
+  -webkit-box-shadow: 0 0 30px 2px #ffa040;
   //border:5px solid #000000;
   padding: 0px; 
     margin: -80px auto 0;
