@@ -126,7 +126,7 @@ html, body {
 #amberlight {
   border-radius: 50%;
   //background-image: linear-gradient(45deg, #ff8000, #ffa040);
-  background-image: radial-gradient(#ff8000 30%, #ffa040 60%, #000000);
+  background-image: -webkit-radial-gradient(#ff8000 30%, #ffa040 60%, #000000);
   background-repeat: repeat;
   background-size: 30px 30px;
   -webkit-transform: rotate(45deg);
