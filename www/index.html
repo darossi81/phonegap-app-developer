@@ -55,7 +55,7 @@ function timedText() {
 	var amberT = a.options[a.selectedIndex].value;
 	//var r = document.getElementById("redTime");
 	//var redT = r.options[r.selectedIndex].value;
-  myVar = setTimeout(myTimeout1, amberT * 1000) 
+  myVar = setTimeout(myTimeout1, amberT * 1000 * 60) 
   //myVar2 = setTimeout(myTimeout2, redT * 1000) 
 }
 
@@ -115,9 +115,10 @@ function myStopFunction() {
 			</div>
 	<!--
 				<select id="redTime">
-					  <option value="5" >5 Seconds</option>
-					  <option value="10" selected="selected">10 Seconds</option>
-					  <option value="15">15 Seconds</option>
+					  <option value="0.1" >0.1 Minutes</option>
+					  <option value="5" >5 Minutes</option>
+					  <option value="7" selected="selected">7 Minutes</option>
+					  <option value="10">10 Minutes</option>
 				</select>
 	-->
 
