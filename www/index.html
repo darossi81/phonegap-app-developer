@@ -39,49 +39,93 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
     <title>Hello World</title>
 </head>
 
 <script>
 
 
+var myVar;
+var myVar2;
+var myVar3;
+
+	  var w;
+
+
 function timedText() {
+
+
 	
-		var lbl = document.getElementById('startButton');
-        var buttonName = "Running";
-        lbl.innerText = buttonName;   
+		//var lbl = document.getElementById('startButton');
+        //var buttonName = "Running";
+        //lbl.innerText = buttonName;   
+		
+		document.getElementById("startButton").disabled = true;
+		document.getElementById("playButton").style.opacity = 0.1;
+		document.getElementById("stopButton").style.opacity = 1;
+	
+	var g = document.getElementById("greenTime");
+	var greenT = g.options[g.selectedIndex].value;
 	
 	var a = document.getElementById("amberTime");
 	var amberT = a.options[a.selectedIndex].value;
-	//var r = document.getElementById("redTime");
-	//var redT = r.options[r.selectedIndex].value;
-  myVar = setTimeout(myTimeout1, amberT * 1000 * 60) 
-  //myVar2 = setTimeout(myTimeout2, redT * 1000) 
+	
+	var r = document.getElementById("redTime");
+	var redT = r.options[r.selectedIndex].value;
+	
+myVar = setTimeout(myTimeout1, greenT * 1000); 
+myVar2 = setTimeout(myTimeout2, amberT * 1000);
+myVar3 = setTimeout(myTimeout3, redT * 1000); 
 }
 
 function myTimeout1() {
   //document.getElementById('amberlight').style.background = '#ffbf00';
-      document.getElementById("amberlight").className = "amberlight";
-  document.getElementById("amberlight").style.visibility = "visible";
+      //document.getElementById("amberlight").className = "amberlight";
+w = document.getElementById("left").offsetWidth;
+document.getElementById("greenlight").style.width = w - 100 + "px";
+document.getElementById("greenlight").style.height = w - 100 + "px";
+  document.getElementById("greenlight").style.visibility = "visible";
+  document.getElementById("stopButton").style.opacity = 1;
 
 }
 function myTimeout2() {
   //document.getElementById('redlight').style.background = '#ff0000';
+  w = document.getElementById("left").offsetWidth;
+document.getElementById("amberlight").style.width = w - 100 + "px";
+document.getElementById("amberlight").style.height = w - 100 + "px";
       document.getElementById("amberlight").style.visibility = "visible";
-  document.getElementById("amberlight").className = "redlight";
+	  document.getElementById("stopButton").style.opacity = 1;
+  //document.getElementById("redlight").className = "redlight";
+}
+function myTimeout3() {
+  //document.getElementById('redlight').style.background = '#ff0000';
+  w = document.getElementById("left").offsetWidth;
+document.getElementById("redlight").style.width = w - 100 + "px";
+document.getElementById("redlight").style.height = w - 100 + "px";
+      document.getElementById("redlight").style.visibility = "visible";
+	  document.getElementById("stopButton").style.opacity = 1;
+  //document.getElementById("redlight").className = "redlight";
 }
 
 
 function myStopFunction() {
-		var lbl = document.getElementById('startButton');
-        var buttonName = "Start";
-        lbl.innerText = buttonName;   
+		//let lbl = document.getElementById('startButton');
+        //let buttonName = "Start";
+        //lbl.innerText = buttonName;   
+		document.getElementById("startButton").disabled = false;
+		document.getElementById("playButton").style.opacity = 1;
+		document.getElementById("stopButton").style.opacity = 0.1;
+  document.getElementById('greenlight').style.visibility = 'hidden';
   document.getElementById('amberlight').style.visibility = 'hidden';
-  document.getElementById('redlight').style.visibility = 'hidden';
+    document.getElementById('redlight').style.visibility = 'hidden';
   clearTimeout(myVar);
-  clearTimeout(myVar2);
+   clearTimeout(myVar2);
+   clearTimeout(myVar3);
 }
-
 
 </script>
 
@@ -89,48 +133,58 @@ function myStopFunction() {
 <body>
 
 
-<div id="container">
-	<div id="header">
-		<div id="amberlight"></div>
-		<!-- <td colspan="3"><div id="redlight" class = "redlight"></div></td> -->
+<div class="container-fluid" style="margin-top:0px;height:90vh;background-color:#000000;">
+  <div class="row" style="background-color:#000000;height:100%">
+  
+    <div id="left" class="col-sm-4 align-self-center" style="background-color:#000000;">
+				<div id="greenlight"></div>
 	</div>
- 
-	 <div id="footer">
-
-			<div id="start">
-			<button id="startButton" onclick="timedText()" class="button1">Start</button>
-			</div>
-			
-			<div id = "stop">
-			<button onclick="myStopFunction()" class = "button2">Stop/Reset</button>
-			</div>
-
-			
-			<div id = "minutes">
-			<select id="amberTime">
-					  <option value="0.1" >0.1 Minutes</option>
-					  <option value="5" >5 Minutes</option>
-					  <option value="7" selected="selected">7 Minutes</option>
-					  <option value="10">10 Minutes</option>
-				</select>
-			</div>
-	<!--
-				<select id="redTime">
-					  <option value="0.1" >0.1 Minutes</option>
-					  <option value="5" >5 Minutes</option>
-					  <option value="7" selected="selected">7 Minutes</option>
-					  <option value="10">10 Minutes</option>
-				</select>
-	-->
-
-
-				<!-- <div>Test</div> -->
-			<div id ="test"><button onclick="myTimeout1()" class="button1">Test</button></div>
-			<!--<button onclick="myTimeout2()" class="testRed">2</button>-->
+	
+	<div id ="middle" class="col-sm-4 align-self-center" style="background-color:#000000;">
+				<div id="amberlight"></div>
 	</div>
-<div>
+	
+	<div id = "right" class="col-sm-4 align-self-center" style="background-color:#000000;">
+				<div id="redlight"></div>
+	</div>
+	
+  </div>
+</div>
 
-
+<div class="container-fluid" style="padding:0;margin:0;">
+<div class="jumbotron text-center" style="margin-bottom:0;position:absolute;bottom:0;width:100%;height:10%;padding:0;border-radius:0px;background-color:#000000;">
+	<div id="start">
+			<button id="startButton" onclick="timedText()" class="button1"><span id = "playButton" class = "button-play" style="background-color:#333333;"></span></button>
+	</div>
+	<div id = "stop">
+			<button onclick="myStopFunction()" class="button2"><span id = "stopButton" class = "button-stop" style="background-color:#333333;opacity:0.1;"></span></button>
+	</div>
+	<div id = "minutes">
+			<select id="greenTime" style="background-color:#006400">
+					  <option value="5" selected="selected">5 min</option>
+					  <option value="10">10 min</option>
+					  <option value="15">15 min</option>
+				</select>
+	</div>
+	<div id = "minutes">
+				<select id="amberTime" style="background-color:#CC6E19">
+					  <option value="5" >5 min</option>
+					  <option value="10" selected="selected">10 min</option>
+					  <option value="15">15 min</option>
+				</select>
+	</div>
+	<div id = "minutes">
+				<select id="redTime" style="background-color:#B21919">
+					  <option value="5" >5 min</option>
+					  <option value="10">10 min</option>
+					  <option value="15" selected="selected">15 min</option>
+				</select>
+	</div>
+	<div id ="test"><button onclick="myTimeout1()" class="button1" style="background-color:#006400;color:#006400">1</button></div>
+	<div id ="test2"><button onclick="myTimeout2()" class="button1" style="background-color:#CC6E19;color:#CC6E19">2</button></div>
+	<div id ="test3"><button onclick="myTimeout3()" class="button1" style="background-color:#B21919;color:#B21919">3</button></div>
+</div>
+</div>
 
 </body>
 
