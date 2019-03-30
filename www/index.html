@@ -46,7 +46,10 @@
     <title>Hello World</title>
 </head>
 
-<script>
+  <script>
+
+
+
 
 
 var myVar;
@@ -127,24 +130,28 @@ function myStopFunction() {
    clearTimeout(myVar3);
 }
 
+
 </script>
 
 
 <body>
 
 
-<div class="container-fluid" style="margin-top:0px;height:90vh;background-color:#000000;">
-  <div class="row" style="background-color:#000000;height:100%">
+
+
+
+<div class="container-fluid" style="margin-top:0px;height:90vh;width:100vw;background-color:#000000;display:table;">
+  <div class="row" style="background-color:#000000;height:100%;display:table-cell;vertical-align:middle;">
   
-    <div id="left" class="col-sm-4 align-self-center" style="background-color:#000000;">
+    <div id="left" class="left" style="background-color:#000000;">
 				<div id="greenlight"></div>
 	</div>
 	
-	<div id ="middle" class="col-sm-4 align-self-center" style="background-color:#000000;">
+	<div id ="middle" class="middle" style="background-color:#000000;">
 				<div id="amberlight"></div>
 	</div>
 	
-	<div id = "right" class="col-sm-4 align-self-center" style="background-color:#000000;">
+	<div id = "right" class="right" style="background-color:#000000;">
 				<div id="redlight"></div>
 	</div>
 	
@@ -152,7 +159,7 @@ function myStopFunction() {
 </div>
 
 <div class="container-fluid" style="padding:0;margin:0;">
-<div class="jumbotron text-center" style="margin-bottom:0;position:absolute;bottom:0;width:100%;height:10%;padding:0;border-radius:0px;background-color:#000000;">
+<div class="jumbotron text-center" style="margin-bottom:0;position:absolute;bottom:0;width:100%;height:11%;padding:0;border-radius:0px;background-color:#000000;">
 	<div id="start">
 			<button id="startButton" onclick="timedText()" class="button1"><span id = "playButton" class = "button-play" style="background-color:#333333;"></span></button>
 	</div>
@@ -185,7 +192,5 @@ function myStopFunction() {
 	<div id ="test3"><button onclick="myTimeout3()" class="button1" style="background-color:#B21919;color:#B21919">3</button></div>
 </div>
 </div>
-
 </body>
-
 </html>
